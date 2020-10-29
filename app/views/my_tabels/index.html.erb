@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>My Tabels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nume</th>
+      <th>Altceva</th>
+      <th>Cv</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_tabels.each do |my_tabel| %>
+      <tr>
+        <td><%= my_tabel.nume %></td>
+        <td><%= my_tabel.altceva %></td>
+        <td><%= my_tabel.cv %></td>
+        <td><%= link_to 'Show', my_tabel %></td>
+        <td><%= link_to 'Edit', edit_my_tabel_path(my_tabel) %></td>
+        <td><%= link_to 'Destroy', my_tabel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New My Tabel', new_my_tabel_path %>

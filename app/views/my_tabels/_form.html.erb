@@ -1,0 +1,32 @@
+<%= form_for(my_tabel) do |f| %>
+  <% if my_tabel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(my_tabel.errors.count, "error") %> prohibited this my_tabel from being saved:</h2>
+
+      <ul>
+      <% my_tabel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nume %>
+    <%= f.text_field :nume %>
+  </div>
+
+  <div class="field">
+    <%= f.label :altceva %>
+    <%= f.text_field :altceva %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cv %>
+    <%= f.text_field :cv %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

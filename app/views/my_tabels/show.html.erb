@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nume:</strong>
+  <%= @my_tabel.nume %>
+</p>
+
+<p>
+  <strong>Altceva:</strong>
+  <%= @my_tabel.altceva %>
+</p>
+
+<p>
+  <strong>Cv:</strong>
+  <%= @my_tabel.cv %>
+</p>
+
+<%= link_to 'Edit', edit_my_tabel_path(@my_tabel) %> |
+<%= link_to 'Back', my_tabels_path %>

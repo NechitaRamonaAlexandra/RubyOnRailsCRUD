@@ -1,0 +1,2 @@
+module MyTabelsHelper
+end

@@ -1,0 +1,2 @@
+class MyTabel < ApplicationRecord
+end
